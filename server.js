@@ -22,12 +22,12 @@ app.use(cors({
     origin: "https://myvegancookbook.onrender.com"
 }));
 // use helmet to set Content Security Policy
-app.use(helmet.contentSecurityPolicy({
-    directives: {
-        defaultSrc: ["'self'"],
-        fontSrc: ["'self'", "https://fonts.gstatic.com", "https://fonts.googleapis.com"]
-    }
-}));
+// app.use(helmet.contentSecurityPolicy({
+//     directives: {
+//         defaultSrc: ["'self'"],
+//         fontSrc: ["'self'", "https://fonts.gstatic.com", "https://fonts.googleapis.com"]
+//     }
+// }));
 // use morgan logging middleware
 if (environment === 'development') {
     app.use(morgan('dev'));
