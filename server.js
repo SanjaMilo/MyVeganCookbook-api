@@ -18,8 +18,8 @@ const environment = process.env.NODE_ENV;
 // use helmet to set Content Security Policy
 app.use(helmet.contentSecurityPolicy({
     directives: {
-        defaultSrc: ["'self'", "https://fonts.gstatic.com", "https://fonts.googleapis.com"],
-        fontSrc: ["'self'", "https://fonts.gstatic.com", "https://fonts.googleapis.com"]
+        defaultSrc: ["'self'"],
+        fontSrc: ["'self'", "<URL>", "https://fonts.gstatic.com", "https://fonts.googleapis.com"]
     } 
 }));
 // use json
