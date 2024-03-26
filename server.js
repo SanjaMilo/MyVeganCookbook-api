@@ -15,19 +15,18 @@ const PORT = process.env.PORT || 5000;
 const environment = process.env.NODE_ENV;
 
 // Middleware
-// use helmet to set Content Security Policy
-app.use(helmet.contentSecurityPolicy({
-    directives: {
-        defaultSrc: ["'self'"],
-        styleSrcElem: ["'self'", "https://fonts.googleapis.com"],
-        fontSrc: ["'self'", "https://fonts.gstatic.com", "https://fonts.googleapis.com"]
-    }
-}));
 // use json
 app.use(express.json());
 // use cors
 app.use(cors({
     origin: "https://myvegancookbook.onrender.com"
+}));
+// use helmet to set Content Security Policy
+app.use(helmet.contentSecurityPolicy({
+    directives: {
+        defaultSrc: ["'self'"],
+        fontSrc: ["'self'", "https://fonts.gstatic.com", "https://fonts.googleapis.com"]
+    }
 }));
 // use morgan logging middleware
 if (environment === 'development') {
