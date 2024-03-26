@@ -22,10 +22,7 @@ app.use(helmet.contentSecurityPolicy({
         fontSrc: [
             "'self'", 
             "https://fonts.gstatic.com", 
-            "https://fonts.googleapis.com", 
-            "https://fonts.googleapis.com/css2?family=Calligraffitti&family=Ephesis:wght@300;400;500;700;800;900&family=Great+Vibes&display=swap",
-            "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap",
-            "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            "https://fonts.googleapis.com"
         ]
     } 
 }));

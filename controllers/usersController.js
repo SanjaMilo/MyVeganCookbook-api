@@ -5,7 +5,8 @@ import bcrypt from 'bcrypt';
 
 
 const createToken = (_id) => {
-    return jwt.sign({_id: _id}, process.env.SECRET, {expiresIn: '7d'});
+    return jwt.sign({_id: _id}, process.env.SECRET); 
+    // return jwt.sign({_id: _id}, process.env.SECRET, {expiresIn: '30d'}); // '30d' is 30 days
 };
 
 // Login user
